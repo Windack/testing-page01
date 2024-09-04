@@ -17,10 +17,12 @@
 * {
 	font-family: 'Inter', sans-serif;
 	color: #212529;
+    box-sizing: border-box;
 }
 
 body {
 	margin: 0px;
+    max-width: 100vw;
 }
 
 p, h1, h2, h3 {
@@ -37,11 +39,36 @@ a {
     box-sizing: border-box;
 }
 
+h2.small {
+    font-weight: 500;
+    font-size: 2em;
+    letter-spacing: -0.0125em;
+}
+
+h2.small > span {
+    color: #21252925;
+}
+
 .page-wrapper {
 	max-width: 1920px;
-    overflow: hidden;
+    overflow: auto;
 	margin: auto;
-	padding: 0px 10px;
+	padding: 0em 0.5em;
+}
+
+.container {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.p-sec-top {
+    padding-top: 6em;
+}
+
+.p-sec-bottom {
+    padding-bottom: 2em;
 }
 
 /* LOGO CUSTOM */
@@ -49,16 +76,17 @@ a {
 .logo {
 	font-size: 1.2em;
 	font-weight: 400;
-	letter-spacing: 0px;
+	letter-spacing: -0.0125em;
 }
 
 /* BUTTON CSS */
 
 .button-primary {
     display: flex;
+    width: fit-content;
 	background: #FB6543;
 	color: #ffffff;
-	padding: 10px;
+	padding: 0.5em;
 	border-radius: 5px;
 	transition: all 0.3s;
 }
@@ -70,14 +98,38 @@ a {
 
 .button-primary i {
     margin: auto;
-    margin-left: 7px;
+    margin-left: 0.5em;
 }
 
 .button-seconday {
     display: flex;
+    width: fit-content;
     border: 1px solid #212529;
-    padding: 20px 10px;
+    padding: 1em 0.5em;
     border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.button-seconday:hover {
+    background: #212529;
+    color: #ffffff;
+}
+
+.button-tertiary {
+    display: flex;
+    width: fit-content;
+    border: 1px solid #212529;
+    background: #212529;
+    color: #ffffff;
+    padding: 0.7em 1.2em;
+    font-size: 0.95em;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.button-tertiary:hover {
+	background: #ffffff;
+	color: #212529;
 }
 
 /* HEADER CSS */
@@ -93,7 +145,7 @@ a {
 }
 
 .navbar .logo {
-    padding: 5px 7px;
+    padding: 0.25em 0.4em;
     border-radius: 5px;
     background: #ffffff50;
     -webkit-backdrop-filter: blur(15px);
@@ -109,7 +161,7 @@ a {
 
 .navbar .header-nav .nav-item {
 	list-style-type: none;
-	padding: 10px 0px;
+	padding: 0.5em 0em;
     border-radius: 5px;
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
@@ -117,7 +169,7 @@ a {
 
 .navbar .header-nav .nav-item a {
 	background: #B6B6B625;
-	padding: 10px 7px;
+	padding: 0.5em 0.5em;
 	border-radius: 5px;
 	transition: all 0.3s;
 }
@@ -131,7 +183,7 @@ a {
 
 .hero-section {
     display: flex;
-    margin-top: 10px;
+    margin-top: 0.5em;
 }
 
 .hero-image {
@@ -139,14 +191,89 @@ a {
     background-size: cover;
     background-position: top;
     width: 100%;
-    height: 600px;
-    border-radius: 12px;
+    height: 30em;
+    border-radius: 10px;
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: auto auto 50px 50px;
+    max-width: 50em;
+    margin: auto auto 2em 2em;
 }
 
+.hero-content p {
+    line-height: 1.5em;
+}
+
+/* FRONTPAGE g-3 */
+
+.frontpage-g3 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-column-gap: 0.5em;
+}
+
+.frontpage-col-3 .col3-images{
+    display: flex;
+    aspect-ratio: 2 / 2.5;
+    position: relative;
+    overflow: hidden;
+}
+
+.frontpage-col-3 .vis-wrap {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden
+}
+
+.frontpage-g3 .img-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.frontpage-g3 .img-wrapper img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.frontpage-g3 .row2 .col3-images {
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.frontpage-g3 .row2 .vis-wrap {
+    height: 50%;
+}
+
+.col3-text .text {
+    margin-top: 2em;
+    padding-right: 0.5em;
+}
+
+.col3-text h3 {
+    font-weight: 400;
+    font-size: 1.75em;
+    letter-spacing: -0.0125em;
+}
+
+.col3-text .text .sub {
+    font-size: 0.9em;
+    margin-top: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.125em;
+    color: #FB6543;
+}
+
+.col3-text .text p:not(.sub) {
+    font-size: 0.9em;
+    line-height: 1.75em;
+    color: #21252975;
+}
+
+.col3-text a {
+    margin-top: 2.5em;
+}
