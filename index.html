@@ -14,19 +14,19 @@
 			<a class="nav-logo logo" href="#home">test-seite®</a>
 			<ul class="header-nav">
 				<li class="nav-item">
-					<a href="#">Home</a>
+					<a href="javascript: scrollToTop();">Start</a>
 				</li>
 				<li class="nav-item">
-					<a href="#grid-3">Grid-3</a>
+					<a href="javascript: scrollToGrid();">Grid-3</a>
 				</li>
 				<li class="nav-item">
-					<a href="#place2">Placeholder</a>
+					<a href="javascript: scrollToStatic()">Static Background</a>
 				</li>
 			</ul>
 			<a class="contact-btn button-primary" href="#contact">Contact us! <i class="lni lni-arrow-right"></i></a>
 		</nav>
 		
-		<div class="page-wrapper">
+		<div class="page-wrapper" id="top">
 			
 			<div class="wide-continer hero-section hero-image">
                 <div class="hero-content">
@@ -100,19 +100,26 @@
                 </div>
             </div>
 			
-			<div class="container p-sec-top p-sec-bottom" id="666">
+			<div class="container p-sec-top p-sec-bottom" id="static-bg">
                 <h2 class="small p-sec-bottom">Static Background Image<br>
                     <span>Dolor sit amet, consectetur adipiscing elit.</span>
                 </h2>
 			</div>
 			<div class="wide-container static-background">
-				<div class="">
-					<div class="b">
-
-					</div>
+				<div class="inner-container">
+                    <h3 style="font-size: 3em; color: #ffffff;">Lorem ipsum.</h3>
+                    <h3 style="font-size: 3em; color: #ffffff50;">Dolor sit amet.</h3>
 				</div>
 			</div>
 			
 		</div>
+        
+        <footer class="main-foot">
+            <div style="padding: 2em;">
+                <p>© Copyright Paul Wunderer</p>
+            </div>
+        </footer>
+        
+        <script type="text/jscript" src="scripts.js" charset="UTF-8"></script>
 	</body>
 </html>
