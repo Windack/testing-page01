@@ -36,7 +36,7 @@ p {
 a {
 	text-decoration: none;
 	color: inherit;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 h2.small {
@@ -80,6 +80,10 @@ h2.small > span {
 }
 
 /* BUTTON CSS */
+
+a[class^='button'] {
+	cursor: pointer;
+}
 
 .button-primary {
     display: flex;
@@ -187,7 +191,7 @@ h2.small > span {
 }
 
 .hero-image {
-    background-image: url("images/hero-img.jpg");
+	background-image: url("images/hero-img.jpg");
     background-size: cover;
     background-position: top;
     width: 100%;
