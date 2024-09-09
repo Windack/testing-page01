@@ -1,18 +1,18 @@
-/* Script for Scrolling*/
+// script for bg-swap when scrolling
 
-window.addEventListener('scroll', function() {
-    if (window.scrollY > 1700 & window.scrollY < 2250) {
-        document.body.classList.add('change-color');
+var staticBG = document.querySelector('#static-bg');
+
+window.onscroll = function() {
+	if (staticBG.getBoundingClientRect().top <= 0) {
+		document.body.classList.add('change-color');
         document.getElementsByClassName('navbar')[0].classList.add('change-color');
-    } else {
-        document.body.classList.remove('change-color');
+	} else {
+		document.body.classList.remove('change-color');
         document.getElementsByClassName('navbar')[0].classList.remove('change-color');
-    }
-});
+	}
+}
 
-window.addEventListener('scroll', function() {
-    
-});
+// scripts for scroll-to events
 
 function scrollToTop() {
   document.querySelector('#top').scrollIntoView({behavior: 'smooth'});
@@ -25,3 +25,31 @@ function scrollToGrid() {
 function scrollToStatic() {
   document.querySelector('#static-bg').scrollIntoView({behavior: 'smooth'});
 }
+
+// script for burger menu
+
+const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".nav-item");
+const hamburger= document.querySelector(".hamburger");
+const closeIcon= document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+
+function toggleMenu() {
+	if (menu.classList.contains("showMenu")) {
+		menu.classList.remove("showMenu");
+		closeIcon.style.display = "none";
+		menuIcon.style.display = "block";
+	} else {
+		menu.classList.add("showMenu");
+		closeIcon.style.display = "block";
+		menuIcon.style.display = "none";
+	}
+}
+
+hamburger.addEventListener("click", toggleMenu);
+
+menuItems.forEach(
+	function(menuItem) {
+		menuItem.addEventListener("click", toggleMenu);
+	}
+)
